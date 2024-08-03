@@ -25,4 +25,4 @@ Steps to post 3 Task
 Steps to post project plans
 1. Post project plans
 2. Post schedule
-3. Verify Dates in the JSON response or in the browser localhost:8088/v1/api/projects
+3. Verify Dates in the JSON response or in the browser http://localhost:8088/v1/api/projects

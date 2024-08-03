@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "180d4f33-d432-4a2d-a14e-cf0706e8638b",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4999286",
+		"_collection_link": "https://lunar-sunset-356722.postman.co/workspace/Exam1~4e56a42c-f09e-44c4-9caa-512122fe1317/collection/4999286-180d4f33-d432-4a2d-a14e-cf0706e8638b?action=share&source=collection_link&creator=4999286"
+	},
+	"item": [
+		{
+			"name": "Post Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Task 1\",\n  \"duration\": 5,\n  \"dependencies\": []\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Task 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Task 2\",\n  \"duration\": 3,\n  \"dependencies\": [\n    {\n      \"id\": 1\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Task Copy 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Task 3\",\n  \"duration\": 2,\n  \"dependencies\": [\n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/v1/api/tasks/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"tasks",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project plans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Sample Project\",\n  \"tasks\": [\n    {\n      \"name\": \"Task 1\",\n      \"duration\": 5,\n      \"dependencies\": []\n    },\n    {\n      \"name\": \"Task 2\",\n      \"duration\": 3,\n      \"dependencies\": [\n        {\n          \"id\": 1\n        }\n      ]\n    },\n    {\n      \"name\": \"Task 3\",\n      \"duration\": 2,\n      \"dependencies\": [\n        {\n          \"id\": 2\n        }\n      ]\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/api/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project plans Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/v1/api/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
